@@ -13,3 +13,11 @@ export const removePost = (id) => {
     id
   }
 }
+
+export const editPost = (id, data) => {
+  return {
+    type: 'EDIT_POST',
+    id,
+    data
+  }
+}

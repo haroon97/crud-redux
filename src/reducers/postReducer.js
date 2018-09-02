@@ -6,6 +6,8 @@ const postReducer = (state = [], action) => {
       return state.concat([action.data])
     case 'REMOVE_POST':
       return state.filter((post) => post.id !== action.id)
+    case 'EDIT_POST':
+      return state.map((post) => post.id === action.id ? {...post, isEditing: !post.isEditing} : post);
     default:
       return state
   }

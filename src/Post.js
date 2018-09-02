@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { removePost } from './actions/actions';
+import { editPost } from './actions/actions';
 
 class Post extends React.Component {
 
@@ -9,7 +10,7 @@ class Post extends React.Component {
       <div>
         <h2>{this.props.title}</h2>
         <h2>{this.props.message}</h2>
-        <button>Edit</button>
+        <button onClick={() => this.props.dispatch(editPost(this.props.key))}>Edit</button>
         <button onClick={() => this.props.dispatch(removePost(this.props.key))}>Delete</button>
       </div>
     );
