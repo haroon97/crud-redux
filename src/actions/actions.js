@@ -6,3 +6,10 @@ export const addPost = (data) => {
     data
   }
 }
+
+export const removePost = (id) => {
+  return {
+    type: 'REMOVE_POST',
+    id
+  }
+}

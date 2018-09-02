@@ -11,7 +11,8 @@ class PostForm extends React.Component {
     const data = {
       id: uuid(),
       title,
-      message
+      message,
+      isEditing: false
     }
     console.log(data);
     this.props.dispatch(addPost({data}));
