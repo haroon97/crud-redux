@@ -1,8 +1,8 @@
 // ADD_ITEMS
 
-export const addPost = (name) => {
+export const addPost = (data) => {
   return {
     type: 'ADD_POST',
-    name
+    data
   }
 }
