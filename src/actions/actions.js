@@ -7,17 +7,9 @@ export const addPost = (data) => {
   }
 }
 
-export const removePost = (id) => {
+export const deletePost = (id) => {
   return {
-    type: 'REMOVE_POST',
+    type: 'DELETE_POST',
     id
-  }
-}
-
-export const editPost = (id, data) => {
-  return {
-    type: 'EDIT_POST',
-    id,
-    data
   }
 }
