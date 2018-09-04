@@ -13,7 +13,8 @@ class PostForm extends React.Component {
       id: uuid(),
       title,
       message,
-      editing: false
+      editing: false,
+      likes: 0
     }
     this.props.dispatch(addPost(data));
     e.target.elements.title.value = '';
@@ -22,8 +23,9 @@ class PostForm extends React.Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
+      <div className="post-container">
+      <h1 className="post_heading">Create Post</h1>
+        <form className="form" onSubmit={this.handleSubmit}>
           <input type='text' required placeholder='Enter the title' name='title'/> <br />
           <textarea type='text' required placeholder='Enter your message' name='message'/> <br />
           <button>Post</button>

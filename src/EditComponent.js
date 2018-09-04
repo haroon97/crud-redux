@@ -17,8 +17,8 @@ class EditComponent extends React.Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.editHandler}>
+      <div className="post">
+        <form className="form" onSubmit={this.editHandler}>
           <input defaultValue={this.props.post.title} type='text' required name='title' placeholder='Enter the title'/><br />
           <textarea defaultValue={this.props.post.message} type='text' required name='message' placeholder='Enter the message'/><br />
           <button>Update</button>

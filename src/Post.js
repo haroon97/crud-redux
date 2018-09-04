@@ -5,11 +5,13 @@ import { connect } from 'react-redux'
 class Post extends React.Component {
   render() {
     return (
-      <div>
-        <h2>{this.props.post.title}</h2>
-        <h2>{this.props.post.message}</h2>
-        <button onClick={() => this.props.dispatch(editPost(this.props.post.id))}>Edit</button>
-        <button onClick={() => this.props.dispatch(deletePost(this.props.post.id))}>Del</button>
+      <div className="post">
+        <h2 className="post_title">{this.props.post.title}</h2>
+        <p className="post_message">{this.props.post.message}</p>
+        <div className='control_buttons'>
+          <button className='edit' onClick={() => this.props.dispatch(editPost(this.props.post.id))}>Edit</button>
+          <button className='delete' onClick={() => this.props.dispatch(deletePost(this.props.post.id))}>Del</button>
+        </div>
       </div>
     );
   }
