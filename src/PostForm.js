@@ -15,7 +15,9 @@ class PostForm extends React.Component {
       message,
       editing: false
     }
-    this.props.dispatch(addPost(data))
+    this.props.dispatch(addPost(data));
+    e.target.elements.title.value = '';
+    e.target.elements.message.value = '';
   }
 
   render() {
