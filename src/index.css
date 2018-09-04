@@ -184,3 +184,16 @@ margin-right:auto;
 outline: none;
 color:#fff;
 }
+
+.like {
+  background: green;
+  border:none;
+  text-align: center;
+  font-size:20px;
+  padding:10px 25px;
+  border-radius:20px;
+  cursor:pointer;
+  margin-right:auto;
+  outline: none;
+  color:#fff;
+  }

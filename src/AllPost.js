@@ -7,8 +7,8 @@ class AllPost extends React.Component {
   render() {
     return (
       <div>
-        <h1 className="post_heading">All Posts</h1>
         {console.log(this.props.posts)}
+        <h1 className="post_heading">All Posts</h1>
         {this.props.posts.map((post) => (
           <div key={post.id}>
             {post.editing ? <EditComponent post={post} key={post.id}/> : <Post post={post} key={post.id}/>}

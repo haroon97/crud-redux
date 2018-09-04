@@ -9,7 +9,6 @@ class App extends Component {
         <div className='navbar'>
           <h2 className="center ">Post It</h2>
         </div>
-        <h1>CRUD Redux</h1>
         <PostForm />
         <AllPost />
       </div>

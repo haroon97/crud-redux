@@ -28,3 +28,10 @@ export const updatePost = ({id, data}) => {
     data
   }
 }
+
+export const likePost = (id) => {
+  return {
+    type: 'LIKE_POST',
+    id
+  }
+}

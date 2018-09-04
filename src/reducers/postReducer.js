@@ -26,6 +26,9 @@ const postReducer = (state= [], action) => {
         }
       })
     }
+    case 'LIKE_POST': {
+      return state.map((post) => post.id === action.id ? {...post, likes: post.likes + 1} : post)
+    }
     default:
       return state;
   } 
